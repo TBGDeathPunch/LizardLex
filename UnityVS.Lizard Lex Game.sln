@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Lizard Lex Game.CSharp", "UnityVS.Lizard Lex Game.CSharp.csproj", "{BEB60599-302A-26A0-11BC-9E9B69875410}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Lizard Lex Game.CSharp.Plugins", "UnityVS.Lizard Lex Game.CSharp.Plugins.csproj", "{781F3480-126A-0015-DC9F-6EC9AA8A5F5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEB60599-302A-26A0-11BC-9E9B69875410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEB60599-302A-26A0-11BC-9E9B69875410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEB60599-302A-26A0-11BC-9E9B69875410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEB60599-302A-26A0-11BC-9E9B69875410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{781F3480-126A-0015-DC9F-6EC9AA8A5F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{781F3480-126A-0015-DC9F-6EC9AA8A5F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{781F3480-126A-0015-DC9F-6EC9AA8A5F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{781F3480-126A-0015-DC9F-6EC9AA8A5F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

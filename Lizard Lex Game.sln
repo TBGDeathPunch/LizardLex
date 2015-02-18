@@ -1,0 +1,51 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{254B7E5F-7AAE-0BCF-2648-0B62303C65CC}") = "Lizard Lex Game", "Assembly-CSharp-firstpass.csproj", "{B28EAF48-69DA-B523-9E84-B99162507377}"
+EndProject
+Project("{254B7E5F-7AAE-0BCF-2648-0B62303C65CC}") = "Lizard Lex Game", "Assembly-CSharp.csproj", "{BEE84C31-B784-16F1-2B66-186D2B732DC6}"
+EndProject
+Project("{254B7E5F-7AAE-0BCF-2648-0B62303C65CC}") = "Lizard Lex Game", "Assembly-UnityScript-firstpass.unityproj", "{C020A20E-A9DC-BF51-8717-C5BDE85FD966}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B28EAF48-69DA-B523-9E84-B99162507377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28EAF48-69DA-B523-9E84-B99162507377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28EAF48-69DA-B523-9E84-B99162507377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28EAF48-69DA-B523-9E84-B99162507377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE84C31-B784-16F1-2B66-186D2B732DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE84C31-B784-16F1-2B66-186D2B732DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE84C31-B784-16F1-2B66-186D2B732DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE84C31-B784-16F1-2B66-186D2B732DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C020A20E-A9DC-BF51-8717-C5BDE85FD966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C020A20E-A9DC-BF51-8717-C5BDE85FD966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C020A20E-A9DC-BF51-8717-C5BDE85FD966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C020A20E-A9DC-BF51-8717-C5BDE85FD966}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+																										GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = null
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		$0.TextStylePolicy = $3
+		$3.FileWidth = 120
+		$3.TabWidth = 4
+		$3.EolMarker = Unix
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/plain
+		$3.scope = text/plain
+	EndGlobalSection
+
+EndGlobal
