@@ -3,7 +3,8 @@ using System.Collections;
 
 public class PlayerDeath : MonoBehaviour {
 	private bool alive = true;
-	
+
+	// when player recieves message from Guard sets up reset of level
 	public void die()
 	{
 		if (!alive) return;
@@ -11,7 +12,8 @@ public class PlayerDeath : MonoBehaviour {
 		GetComponent<PlayerMove>().enabled = false;
 		StartCoroutine("ResetLevel");
 	}
-	
+
+	// resets level
 	IEnumerator ResetLevel() {
 		yield return new WaitForSeconds(1f);
 		

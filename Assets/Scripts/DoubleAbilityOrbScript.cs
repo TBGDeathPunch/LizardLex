@@ -12,7 +12,7 @@ public class DoubleAbilityOrbScript : MonoBehaviour {
 	void Update () {
 	
 	}
-
+	// sends message to PlayerMove script and destroys orb when Player enters collider
 	void OnTriggerEnter2D(Collider2D other) {
 		other.gameObject.SendMessage("candouble");
 		Destroy(this.gameObject);
