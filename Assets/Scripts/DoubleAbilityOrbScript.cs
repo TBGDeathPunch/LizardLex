@@ -14,6 +14,7 @@ public class DoubleAbilityOrbScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
+		other.gameObject.SendMessage("candouble");
 		Destroy(this.gameObject);
 	}
 }

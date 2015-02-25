@@ -2,8 +2,12 @@
 using System.Collections;
 
 public class PlayerKnockout : MonoBehaviour {
-	public GameObject other;
+	public GameObject GuardCan;
 	public bool playerBehindGuard = false;
+
+	void FindGuard () {
+		GuardCan = GameObject.Find ("Guard4");
+		}
 
 	void canknockout ()
 	{
@@ -15,7 +19,7 @@ public class PlayerKnockout : MonoBehaviour {
 
 		if (playerBehindGuard == true) {
 					if (Input.GetKeyDown (KeyCode.Space)) {
-								Destroy (other);
+								Destroy (GuardCan);
 				playerBehindGuard = false;
 					}
 			}

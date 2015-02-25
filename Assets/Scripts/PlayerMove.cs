@@ -42,6 +42,11 @@ public class PlayerMove : MonoBehaviour {
 		Double,
 	}
 
+	void candouble ()
+	{
+		moveDouble = true;
+	}
+
 	// works out the method of simpe single movement of one space at a time
 	private Vector2 getInput() {
 		Vector2 movement = Vector2.zero;
@@ -71,6 +76,18 @@ public class PlayerMove : MonoBehaviour {
 	void Update () {
 		if (!can_move) return;
 
+		if (Input.GetKeyDown (KeyCode.LeftShift)) {
+			moveDouble = true;
+						if (moveDouble == true) {
+								if (Input.GetKeyDown (KeyCode.LeftShift)) {
+										movementType = PlayerMovementType.Double;
+								}
+						}
+				}
+		if (Input.GetKeyUp (KeyCode.LeftShift)) {
+			moveDouble = false;
+			movementType = PlayerMovementType.Single;
+		}
 
 		Vector2 movement = getInput();
 		
