@@ -119,10 +119,10 @@ public class PlayerMove : MonoBehaviour {
 				break;
 				
 			case PlayerMovementType.Double:
-				if (hit.distance > size.x) {
+				if (hit.distance > size.x || hit.distance > size.y) {
 					movement = movement / 2;
 				}
-				else if (hit.distance < size.x) {
+				else if (hit.distance < size.x || hit.distance < size.y) {
 					movement = Vector2.zero;
 				}
 				break;
