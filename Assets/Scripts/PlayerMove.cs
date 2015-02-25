@@ -76,16 +76,12 @@ public class PlayerMove : MonoBehaviour {
 	void Update () {
 		if (!can_move) return;
 
+		if (moveDouble == true) {
 		if (Input.GetKeyDown (KeyCode.LeftShift)) {
-			moveDouble = true;
-						if (moveDouble == true) {
-								if (Input.GetKeyDown (KeyCode.LeftShift)) {
-										movementType = PlayerMovementType.Double;
-								}
-						}
+					movementType = PlayerMovementType.Double;
 				}
+		}
 		if (Input.GetKeyUp (KeyCode.LeftShift)) {
-			moveDouble = false;
 			movementType = PlayerMovementType.Single;
 		}
 
