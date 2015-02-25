@@ -7,6 +7,8 @@ public class PlayerMove : MonoBehaviour {
 	private bool moving_horizontally = false;
 	private bool moving_vertically = false;
 	
+	public LayerMask layer_mask;
+
 	public int id;
 
 	public PlayerMovementType movementType;
@@ -108,7 +110,6 @@ public class PlayerMove : MonoBehaviour {
 
 	// to help set the amount of space that is moved per step depending on the movement type set
 	private Vector2 BlockDetect(Vector2 movement) {
-		int layer_mask = 1 << LayerMask.NameToLayer("Block");
 		RaycastHit2D hit;
 		if (hit = Physics2D.Raycast(transform.position, movement, movement.magnitude, layer_mask)) {		
 			switch(movementType) {
