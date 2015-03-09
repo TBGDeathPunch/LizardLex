@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class DoubleAbilityOrbScript : MonoBehaviour {
+	public GameObject OtherDoubleOrb;
 
 	// Use this for initialization
 	void Start () {
@@ -12,9 +13,10 @@ public class DoubleAbilityOrbScript : MonoBehaviour {
 	void Update () {
 	
 	}
-	// sends message to PlayerMove script and destroys orb when Player enters collider
+	// sends message to PlayerMove script and destroys all orbs on all levels when Player enters collider
 	void OnTriggerEnter2D(Collider2D other) {
 		other.gameObject.SendMessage("candouble");
 		Destroy(this.gameObject);
+		Destroy(OtherDoubleOrb);
 	}
 }

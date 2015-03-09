@@ -6,7 +6,8 @@ public class LevelExit : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.gameObject.tag == "Player") {
-			other.gameObject.SendMessage("die");
+			// sends message to Main Camera
+			Camera.main.SendMessage("camerachange");
 		}
 	}
 }
