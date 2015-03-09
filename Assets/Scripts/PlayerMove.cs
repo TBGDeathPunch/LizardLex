@@ -7,6 +7,8 @@ public class PlayerMove : MonoBehaviour {
 	private bool moving_horizontally = false;
 	private bool moving_vertically = false;
 	
+	public LayerMask layer_mask;
+
 	public int id;
 
 	public PlayerMovementType movementType;
@@ -36,12 +38,13 @@ public class PlayerMove : MonoBehaviour {
 							rigidbody2D.velocity = new Vector2 (move, rigidbody2D.velocity.y);
 						}
 	}*/
-
+	// two types of movement
 	public enum PlayerMovementType {
 		Single,
 		Double,
 	}
 
+	// function that recieves message from orb and sets moveDouble to true
 	void candouble ()
 	{
 		moveDouble = true;
@@ -76,16 +79,14 @@ public class PlayerMove : MonoBehaviour {
 	void Update () {
 		if (!can_move) return;
 
+		// allows Player to move in double when the Left Shift key is pressed down only when moveDouble is true
+		if (moveDouble == true) {
 		if (Input.GetKeyDown (KeyCode.LeftShift)) {
-			moveDouble = true;
-						if (moveDouble == true) {
-								if (Input.GetKeyDown (KeyCode.LeftShift)) {
-										movementType = PlayerMovementType.Double;
-								}
-						}
+					movementType = PlayerMovementType.Double;
 				}
+		}
+		// even after double movement is unlocked when Left Shift is not pressed the movement type will be single
 		if (Input.GetKeyUp (KeyCode.LeftShift)) {
-			moveDouble = false;
 			movementType = PlayerMovementType.Single;
 		}
 
@@ -98,7 +99,7 @@ public class PlayerMove : MonoBehaviour {
 			StartCoroutine ("LerpMovement", movement);
 		}
 	}
-	
+	// for later possible animations
 	private void SetAnimationDirection(Vector2 movement) {
 		int direction;
 		if (movement.y == 0) {
@@ -112,7 +113,6 @@ public class PlayerMove : MonoBehaviour {
 
 	// to help set the amount of space that is moved per step depending on the movement type set
 	private Vector2 BlockDetect(Vector2 movement) {
-		int layer_mask = 1 << LayerMask.NameToLayer("Block");
 		RaycastHit2D hit;
 		if (hit = Physics2D.Raycast(transform.position, movement, movement.magnitude, layer_mask)) {		
 			switch(movementType) {
@@ -122,10 +122,10 @@ public class PlayerMove : MonoBehaviour {
 				break;
 				
 			case PlayerMovementType.Double:
-				if (hit.distance > size.x) {
+				if (hit.distance > size.x || hit.distance > size.y) {
 					movement = movement / 2;
 				}
-				else if (hit.distance < size.x) {
+				else if (hit.distance < size.x || hit.distance < size.y) {
 					movement = Vector2.zero;
 				}
 				break;
@@ -134,7 +134,7 @@ public class PlayerMove : MonoBehaviour {
 		
 		return movement;
 	}
-	
+	// to allow movement based on set time of movement if there is any
 	private IEnumerator LerpMovement(Vector2 movement) {
 		if (movement.magnitude == 0) yield break;
 		
@@ -154,18 +154,18 @@ public class PlayerMove : MonoBehaviour {
 		
 		yield break;
 	}
-	
+
+
 	private void startMoving() {
 		can_move = false;
 		GetComponent<Animator>().SetBool("walking", true);
-		//if (movementType == PlayerMovementType.Jump) GetComponent <BoxCollider2D>().enabled = false;
 	}
 	
 	private void stopMoving() {
 		can_move = true;
 		GetComponent<Animator>().SetBool("walking", false);
-		//if (movementType == PlayerMovementType.Jump) GetComponent <BoxCollider2D>().enabled = true;
 	}
-	
+
+	// for ID if needed
 	public int ID { get { return id; } }
 }
