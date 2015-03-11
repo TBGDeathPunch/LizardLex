@@ -95,12 +95,12 @@ public class PlayerMove : MonoBehaviour {
 		movement = BlockDetect(movement);
 		
 		if (movement.magnitude > 0) {
-			SetAnimationDirection(movement);
+			//SetAnimationDirection(movement);
 			StartCoroutine ("LerpMovement", movement);
 		}
 	}
 	// for later possible animations
-	private void SetAnimationDirection(Vector2 movement) {
+	/*private void SetAnimationDirection(Vector2 movement) {
 		int direction;
 		if (movement.y == 0) {
 			direction = (movement.x > 0) ? 1 : 3;
@@ -109,7 +109,7 @@ public class PlayerMove : MonoBehaviour {
 			direction = (movement.y > 0) ? 2 : 0;
 		}
 		GetComponent<Animator>().SetInteger("direction", direction);
-	}
+	}*/
 
 	// to help set the amount of space that is moved per step depending on the movement type set
 	private Vector2 BlockDetect(Vector2 movement) {
@@ -158,12 +158,12 @@ public class PlayerMove : MonoBehaviour {
 
 	private void startMoving() {
 		can_move = false;
-		GetComponent<Animator>().SetBool("walking", true);
+		//GetComponent<Animator>().SetBool("walking", true);
 	}
 	
 	private void stopMoving() {
 		can_move = true;
-		GetComponent<Animator>().SetBool("walking", false);
+		//GetComponent<Animator>().SetBool("walking", false);
 	}
 
 	// for ID if needed
