@@ -57,7 +57,7 @@
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\eventlistener.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/samuel.beatty/Desktop/LizardLex/LizardLex/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/samuel.beatty/Desktop/LizardLex/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
