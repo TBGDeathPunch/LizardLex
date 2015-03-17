@@ -12,8 +12,9 @@ public class eventlistener : MonoBehaviour {
 		InclassScript.onActivation -= onActivation;
 	}
 
+	// resets the game when the player presses the button that is in the scene
 	void onActivation(bool activated)
 	{
-		Debug.Log(activated);
+		Application.LoadLevel(Application.loadedLevelName);
 	}
 }
