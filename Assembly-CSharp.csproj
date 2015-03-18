@@ -51,7 +51,8 @@
      <Compile Include="Assets\Scripts\DoubleAbilityOrbScript.cs" />
      <Compile Include="Assets\Scripts\GuardCatch.cs" />
      <Compile Include="Assets\Scripts\InclassScript.cs" />
-     <Compile Include="Assets\Scripts\LevelExit.cs" />
+     <Compile Include="Assets\Scripts\Level1Exit.cs" />
+     <Compile Include="Assets\Scripts\Level2Exit.cs" />
      <Compile Include="Assets\Scripts\PlayerDeath.cs" />
      <Compile Include="Assets\Scripts\PlayerKnockout.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
