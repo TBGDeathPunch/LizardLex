@@ -61,6 +61,8 @@
      <Compile Include="Assets\Scripts\PlayerKnockout.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\eventlistener.cs" />
+     <None Include="Assets\Sprites\Materials\Water_Panning.shader" />
+     <None Include="Assets\Sprites\Materials\minecraft_vertex.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/samuel.beatty/Desktop/LizardLex/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
