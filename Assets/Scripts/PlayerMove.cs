@@ -20,7 +20,7 @@ public class PlayerMove : MonoBehaviour {
 	private bool can_move = true;
 	
 	private Vector2 movement_start_position;
-	
+
 	void Start() {
 		size = GetComponent<BoxCollider2D>().size;
 	}
@@ -97,6 +97,43 @@ public class PlayerMove : MonoBehaviour {
 		if (movement.magnitude > 0) {
 			//SetAnimationDirection(movement);
 			StartCoroutine ("LerpMovement", movement);
+		}
+
+		if (Input.GetKeyDown(KeyCode.UpArrow)) {
+			if (!audio.isPlaying)
+			{
+				audio.Play();
+			}
+		}
+		if (Input.GetKeyUp(KeyCode.UpArrow)) {
+			audio.Stop();
+		}
+		if (Input.GetKeyDown(KeyCode.DownArrow)) {
+			if (!audio.isPlaying)
+			{
+				audio.Play();
+			}
+		}
+		if (Input.GetKeyUp(KeyCode.DownArrow)) {
+			audio.Stop();
+		}
+		if (Input.GetKeyDown(KeyCode.RightArrow)) {
+			if (!audio.isPlaying)
+			{
+				audio.Play();
+			}
+		}
+		if (Input.GetKeyUp(KeyCode.RightArrow)) {
+			audio.Stop();
+		}
+		if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+			if (!audio.isPlaying)
+			{
+				audio.Play();
+			}
+		}
+		if (Input.GetKeyUp(KeyCode.LeftArrow)) {
+			audio.Stop();
 		}
 	}
 	// for later possible animations
