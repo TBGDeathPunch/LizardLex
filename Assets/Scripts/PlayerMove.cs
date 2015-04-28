@@ -16,6 +16,10 @@ public class PlayerMove : MonoBehaviour {
 	public bool moveDouble = false;
 
 	public float movementTime;
+
+	public AudioClip audio1;
+
+	public AudioSource source1;
 	
 	private bool can_move = true;
 	
@@ -102,38 +106,26 @@ public class PlayerMove : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.UpArrow)) {
 			if (!audio.isPlaying)
 			{
-				audio.Play();
+				source1.PlayOneShot(audio1);
 			}
-		}
-		if (Input.GetKeyUp(KeyCode.UpArrow)) {
-			audio.Stop();
 		}
 		if (Input.GetKeyDown(KeyCode.DownArrow)) {
 			if (!audio.isPlaying)
 			{
-				audio.Play();
+				source1.PlayOneShot(audio1);
 			}
-		}
-		if (Input.GetKeyUp(KeyCode.DownArrow)) {
-			audio.Stop();
 		}
 		if (Input.GetKeyDown(KeyCode.RightArrow)) {
 			if (!audio.isPlaying)
 			{
-				audio.Play();
+				source1.PlayOneShot(audio1);
 			}
-		}
-		if (Input.GetKeyUp(KeyCode.RightArrow)) {
-			audio.Stop();
 		}
 		if (Input.GetKeyDown(KeyCode.LeftArrow)) {
 			if (!audio.isPlaying)
 			{
-				audio.Play();
+				source1.PlayOneShot(audio1);
 			}
-		}
-		if (Input.GetKeyUp(KeyCode.LeftArrow)) {
-			audio.Stop();
 		}
 	}
 	// for later possible animations

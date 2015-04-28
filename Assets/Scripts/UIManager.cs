@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour {
 		}
 		textToDisplay += "Press Esc To Go Back";
 	}
-
+	// UI setup
 	private void OnGUI()
 	{
 		if (Background != null)
