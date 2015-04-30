@@ -51,6 +51,8 @@
      <Compile Include="Assets\Scripts\Blocker1Spawn.cs" />
      <Compile Include="Assets\Scripts\Blocker2Placer.cs" />
      <Compile Include="Assets\Scripts\Blocker2Spawn.cs" />
+     <Compile Include="Assets\Scripts\Blocker3Placer.cs" />
+     <Compile Include="Assets\Scripts\Blocker3Spawn.cs" />
      <Compile Include="Assets\Scripts\CameraMove.cs" />
      <Compile Include="Assets\Scripts\CanKnockout.cs" />
      <Compile Include="Assets\Scripts\CanKnockout1.cs" />
