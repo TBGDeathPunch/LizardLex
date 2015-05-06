@@ -4,6 +4,7 @@ using System.Collections;
 public class CameraMove : MonoBehaviour {
 	public bool canmovecamera1 = false;
 	public bool canmovecamera2 = false;
+	public bool canmovecamera3 = false;
 
 	// when Main Camera recieves message from Level Exit sets up move of Main Camera position
 	public void camera1change ()
@@ -14,6 +15,11 @@ public class CameraMove : MonoBehaviour {
 	public void camera2change ()
 	{
 		canmovecamera2 = true;
+	}
+
+	public void camera3change ()
+	{
+		canmovecamera3 = true;
 	}
 
 	// moves Main Camera to new position over Level 2
@@ -29,6 +35,14 @@ public class CameraMove : MonoBehaviour {
 		if (canmovecamera2 == true) {
 			Vector3 newPosition = transform.position;
 			newPosition.x = 1;
+			newPosition.y = 1120;
+			newPosition.z = -10;
+			transform.position = newPosition;
+		}
+
+		if (canmovecamera3 == true) {
+			Vector3 newPosition = transform.position;
+			newPosition.x = 775;
 			newPosition.y = 1120;
 			newPosition.z = -10;
 			transform.position = newPosition;

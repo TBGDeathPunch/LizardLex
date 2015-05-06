@@ -20,7 +20,7 @@ public class PlayerKnockout : MonoBehaviour {
 		// if playerBehindGuard is true the player can press the Space key to destroy the GuardCan
 		if (playerBehindGuard == true) {
 					if (Input.GetKeyDown (KeyCode.Space)) {
-								Destroy (GuardCan);
+					Destroy (GuardCan);
 				playerBehindGuard = false;
 					}
 			}
