@@ -12,12 +12,15 @@ public class UIManager : MonoBehaviour {
 	private string menuState;
 
 	public string[] CreditsTextLines = new string[0];
+	public string[] ControlsTextLines = new string[0];
 
 	private string main = "main";
 	private string options = "options";
+	private string controls = "controls";
 	private string credits = "credits";
-
+	
 	private string textToDisplay = "Credits \n";
+	private string textToDisplay2 = "Controls \n";
 	private float volume = 1.0f;
 
 	// Use this for initialization
@@ -30,6 +33,12 @@ public class UIManager : MonoBehaviour {
 			textToDisplay += CreditsTextLines[x] + " \n ";
 		}
 		textToDisplay += "Press Esc To Go Back";
+
+		for (int x = 0; x < ControlsTextLines.Length; x++)
+		{
+			textToDisplay2 += ControlsTextLines[x] + " \n ";
+		}
+		textToDisplay2 += "Press Esc To Go Back";
 	}
 	// UI setup
 	private void OnGUI()
@@ -57,6 +66,11 @@ public class UIManager : MonoBehaviour {
 			WindowRect = GUI.Window(1, WindowRect, optionsFunc, "Options");
 		}
 
+		if (menuState == controls) 
+		{
+			GUI.Box(new Rect(0, 0, Screen.width, Screen.height), textToDisplay2);
+		}
+
 		if (menuState == credits)
 		{
 			GUI.Box(new Rect(0, 0, Screen.width, Screen.height), textToDisplay);
@@ -74,6 +88,10 @@ public class UIManager : MonoBehaviour {
 		if (GUILayout.Button("Options"))
 		{
 			menuState = options;
+		}
+		if (GUILayout.Button ("Controls")) 
+		{
+			menuState = controls;
 		}
 
 		if (GUILayout.Button("Credits"))
@@ -104,6 +122,10 @@ public class UIManager : MonoBehaviour {
 	void Update () 
 	{
 		if (menuState == credits && Input.GetKey(KeyCode.Escape))
+		{
+			menuState = main;
+		}
+		if (menuState == controls && Input.GetKey(KeyCode.Escape))
 		{
 			menuState = main;
 		}
